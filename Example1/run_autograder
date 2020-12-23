@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Find the files to tested ( searches within folders )
+exampleFile=$(find / -xdev -name example1.cpp)
+mFile=$(find / -xdev -name makefile)
+
+# Copies the files into the Autograder's CWD 
+cp $exampleFile /autograder/source/example1.cpp
+cp $mFile /autograder/source/makefile
+
+cd /autograder/source
+
+# Runs the student's make file ( if you're not using makefiles then place you compile command here )
+make
+
+python3 run_tests.py > /autograder/results/results.json
