@@ -14,13 +14,13 @@ class TestDiff(unittest.TestCase):
         """Clean Compile"""
 
         # Create a subprocess to run the students make file to ensure it compiles 
-        fib = subprocess.Popen(["make"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        output = fib.stderr.read().strip().decode('utf-8')
-        fib.kill()
+        test = subprocess.Popen(["make"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = test.stderr.read().strip().decode('utf-8')
+        test.kill()
 
         # Standard unit test case with an associated error message 
         self.assertTrue( output == "", msg=output)
-        fib.terminate()
+        test.terminate()
 
     # Associated point value within GradeScope
     @weight(5)
@@ -28,14 +28,14 @@ class TestDiff(unittest.TestCase):
         #Title used by Gradescope 
         """Run: Output Matching"""
 
-        # Create a subprocess to run the students make file to ensure it compiles 
-        fib = subprocess.Popen(["./test1.out"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        output = fib.stdout.read().strip().decode('utf-8')
-        fib.kill()
+        # Create a subprocess to run the students code to obtain an output 
+        test = subprocess.Popen(["./test1.out"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = test.stdout.read().strip().decode('utf-8')
+        test.kill()
 
         # Standard unit test case with an associated error message 
         self.assertTrue( output == "Hello World", msg=("Expected: Hello World\nFound: "+output))
-        fib.terminate()
+        test.terminate()
 
      # Associated point value within GradeScope
     @weight(5)
@@ -43,12 +43,12 @@ class TestDiff(unittest.TestCase):
         #Title used by Gradescope 
         """Run: Character Count"""
 
-        # Create a subprocess to run the students make file to ensure it compiles 
-        fib = subprocess.Popen(["./test1.out"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        output = fib.stdout.read().strip().decode('utf-8')
-        fib.kill()
+        # Create a subprocess to run the students code to obtain an output 
+        test = subprocess.Popen(["./test1.out"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = test.stdout.read().strip().decode('utf-8')
+        test.kill()
 
         # Standard unit test case with an associated error message 
         self.assertTrue( len(output) == 11, msg=("Expected: 11 characters\nFound: "+str(len(output))))
-        fib.terminate()
+        test.terminate()
    
