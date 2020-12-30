@@ -13,7 +13,7 @@ class TestDiff(unittest.TestCase):
         #Title used by Gradescope 
         """Clean Compile"""
 
-        # Create a subprocess to run the students make file to ensure it compiles 
+        # Create a subprocess to run our make file to ensure it compiles 
         test = subprocess.Popen(["make"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = test.stderr.read().strip().decode('utf-8')
         test.kill()
@@ -28,7 +28,7 @@ class TestDiff(unittest.TestCase):
         #Title used by Gradescope 
         """Default Constructor + WelcomeString Function"""
 
-        # Create a subprocess to run the students make file to ensure it compiles 
+        # Create a subprocess to run the students code with the first Command Line Option
         test = subprocess.Popen(["./test.out", "0"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = test.stdout.read().strip().decode('utf-8')
         test.kill()
@@ -44,7 +44,7 @@ class TestDiff(unittest.TestCase):
         #Title used by Gradescope 
         """Test Case 1: String Constructor """
 
-        # Create a subprocess to run the students make file to ensure it compiles 
+       # Create a subprocess to run the students code with the Second Command Line Option
         test = subprocess.Popen(["./test.out", "1"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = test.stdout.read().strip().decode('utf-8')
         test.kill()
@@ -60,7 +60,7 @@ class TestDiff(unittest.TestCase):
         #Title used by Gradescope 
         """Test Case 2: String Constructor """
 
-        # Create a subprocess to run the students make file to ensure it compiles 
+        # Create a subprocess to run the students code with the Third Command Line Option
         test = subprocess.Popen(["./test.out", "2"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = test.stdout.read().strip().decode('utf-8')
         test.kill()
