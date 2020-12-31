@@ -8,7 +8,7 @@
 <br/><br/>
 
 <center>
-<img src="GradeScopeLogo.jpg" alt="GradescopeLogo">
+<img src="ScreenshotAssests/GradeScopeLogo.jpg" alt="GradescopeLogo">
 </center>
 
 <br/><br/>
@@ -45,13 +45,13 @@ ___
 >if you require a zipped submission you will to unzip the file here
 
 <center>
-<img src="CopyCommand.png" alt="CopyCommand">
+<img src="ScreenshotAssests/CopyCommand.png" alt="CopyCommand">
 </center>
 
 3. Next we need to compile your students code within the source folder. Within this example our students submitted a makefile so the make command is ran with our script. 
 
 <center>
-<img src="RunCommand.png" alt="CopyCommand">
+<img src="ScreenshotAssests/RunCommand.png" alt="CopyCommand">
 </center>
 
 4. We now need to create our test cases. We will be using gradescope's python library along with python's unittest libary. This inital set up is shown within test_subprocess.py. 
@@ -66,7 +66,7 @@ ___
         5. Error Message  
 
 <center>
-<img src="PythonRun.png" alt="CopyCommand">
+<img src="ScreenshotAssests/PythonRun.png" alt="CopyCommand">
 </center>
 
 **Weight**: This is how many points the test case is worth and is defined using a precondition before the function 
